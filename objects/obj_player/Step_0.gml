@@ -46,11 +46,12 @@ if (can_jump > 0)
 	}
 
 //determine collision
-grounded = place_meeting(x, y+1, obj_collision);
+grounded = place_meeting(x, y + 1, obj_collision);
 
 var _x_collision = move_and_collide(move_x, 0, obj_collision, abs(move_x))
 
 var _y_collision = move_and_collide(0, move_y, obj_collision, abs(move_y) + 1, move_x, move_y, move_x, move_y)
+
 
 if (array_length(_y_collision) > 0)
 {
@@ -63,7 +64,7 @@ if (array_length(_y_collision) > 0)
 
 if move_x != 0
 {
-	image_xscale = sign(move_x); //make the sprite face the x movement direction
+	image_xscale = sign(0 - move_x); //make the sprite face the x movement direction
 }
 
 switch (sprite_index) //handles cases for switching between animations
@@ -121,7 +122,7 @@ switch (sprite_index) //handles cases for switching between animations
 			image_index = 0; //reset frame count
 		}
 		
-		if image_index == 4 //SET TO LAST FRAME OF BRAKE ANIMATION
+		if image_index == 0 //SET TO LAST FRAME OF BRAKE ANIMATION
 		{
 			sprite_index = spr_pc_idle; //swap to idle if animation finishes
 			image_index = 0; //reset frame count
@@ -178,7 +179,7 @@ switch (sprite_index) //handles cases for switching between animations
 	#region land	
 	case spr_pc_land: //what happens when the land animation is playing
 		image_speed = 1;
-		if image_index == 3 //SET TO LAST FRAME OF LAND ANIMATION
+		if image_index == 0 //SET TO LAST FRAME OF LAND ANIMATION
 		{
 			sprite_index = spr_pc_idle; //swap to idle animation if on last frame
 			image_index = 0; //reset frame count

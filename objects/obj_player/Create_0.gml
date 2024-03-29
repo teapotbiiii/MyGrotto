@@ -10,9 +10,11 @@ can_jump = 0;
 grounded = false;
 
 jump_count = 0;
-jump_max = 2;
+jump_max = 1;
 
 move_x = 0;
 move_y = 0;
+
+slope_max = 4;
 
 obj_collision.visible = true;
