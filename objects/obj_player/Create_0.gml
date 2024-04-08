@@ -1,9 +1,9 @@
 /// Declare variables for running, jumping, and movement
-move_speed = 14;
+move_speed = 12;
 move_accel = 2;
 move_decel = 1.5;
 
-jump_speed = 28;
+jump_speed = 25;
 fall_speed = 1.4;
 
 can_jump = 0;
