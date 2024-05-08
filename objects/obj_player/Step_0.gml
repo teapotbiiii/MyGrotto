@@ -60,6 +60,19 @@ if (array_length(_y_collision) > 0)
 	move_y = 0;
 }
 
+//determine loading collision
+loadingn = place_meeting(x, y, obj_loadn);
+if loadingn 
+{
+	room_goto_next();
+}
+
+loadingp = place_meeting(x, y, obj_loadp);
+if loadingp 
+{
+	room_goto_previous();
+}
+
 ///Animation Controller -- SET SPRITE CASES & INDEXES TO THE CORRESPONDING ASSETS IN YOUR PROJECT
 
 if move_x != 0

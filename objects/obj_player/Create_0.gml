@@ -17,4 +17,5 @@ move_y = 0;
 
 slope_max = 4;
 
-obj_collision.visible = true;
+loadingn = false;
+loadingp = false;
